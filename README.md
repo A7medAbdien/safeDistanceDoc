@@ -26,13 +26,15 @@ I have suggested two solutions to measure the distance:
 
 There was a low-fidelity prototype, but I will keep that for myself 😊. 
 
-![High-Fidelity Prototype]()
+![hf-prototype](https://github.com/A7medAbdien/safeDistanceDoc/assets/102335234/754ce1b8-6067-4472-a9e7-15f565f4823d)
+
 
 # 3. UML Use Case Diagram
 
 UML Use Cases are visual representations of the usage requirements for a system. They are detailed and specific and are used during actual development to provide a clear and comprehensive description of the system's requirements. UML Use Cases provide an actionable description of the core functionality of the system.
 
-![Use Case Diagram]()
+![Use case diagram](https://github.com/A7medAbdien/safeDistanceDoc/assets/102335234/d43f52e5-2242-4b51-bcab-25f94e9cd4b6)
+
 
 The project use case diagram consists of two main activities:
 - **Start Camera:** The user starts the camera device to measure the distance between the detected object and the camera. The user can show lines between person poses and the current distance between the detected person on this person. The user can show the detection information, like frame rate, image size, and detection latency. If the current distance between the detected person and the camera is less than the safe distance, an alert will be shown.
@@ -42,7 +44,7 @@ The project use case diagram consists of two main activities:
 
 UML Sequence diagrams are a type of diagram used to describe interactions among classes in terms of an exchange of messages over time. They are also known as event diagrams. Sequence diagrams are useful for visualizing and validating various runtime scenarios, as they provide a clear and detailed representation of the interactions and messages that take place between different classes in a system.
 
-![Sequence Diagram]()
+![Sequence diagram](https://github.com/A7medAbdien/safeDistanceDoc/assets/102335234/f3097c10-e37f-4488-9582-62d929bb6e4b)
 
 **Step 1:** The user touches the screen to start the application.
 **Step 2:** The application system opens the device camera.
@@ -57,7 +59,7 @@ UML Sequence diagrams are a type of diagram used to describe interactions among 
 
 So, after searching and digging, I found these solutions.
 
-![Implementations Table]()
+![Implementations Table](https://github.com/A7medAbdien/safeDistanceDoc/assets/102335234/5b2869ff-dae8-43e0-a242-496a5419f957)
 
 Consider the main keywords I used: Augmented Reality, Body detection, Pose detection. Then I realized that Machine Vision would be more accurate than Augmented Reality.
 
@@ -67,7 +69,7 @@ I thought about using face detection built-in ARCore and measuring the distance 
 
 We measure the distance based on 2D understanding. We build an understanding of the actual scene based on the distance between two points in an image. For example, the figure below shows that the railroad ties appear to get smaller as they get further away from us. If we measured the apparent size of each railroad tie, their measured size would decrease in proportion to their distance from our eyes (Brothaler, 2013). The same thing happens to the distance between shoulders and hips. 
 
-![Represent Distance in Flat Images]()
+![Represent distance in flat images](https://github.com/A7medAbdien/safeDistanceDoc/assets/102335234/02592d16-97ca-4ff9-ba30-050058e97ee2)
 
 To calculate the distance between the camera and the detected person, we calculate the distance between the shoulders and hips. We could use the pupillary distance (PD), the distance between the centers of your pupils since it is fixed as the detected person moves, but it will be affected if the detected person did not face the camera. We used the distance between the shoulders and hips, considering if the detected person rotated.
 
