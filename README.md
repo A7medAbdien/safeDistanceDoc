@@ -71,7 +71,7 @@ We measure the distance based on 2D understanding. We build an understanding of 
 
 To calculate the distance between the camera and the detected person, we calculate the distance between the shoulders and hips. We could use the pupillary distance (PD), the distance between the centers of your pupils since it is fixed as the detected person moves, but it will be affected if the detected person did not face the camera. We used the distance between the shoulders and hips, considering if the detected person rotated.
 
-$X_{landmark size}=  \frac{RightSideDistance_{Shoulder→Hip} + LeftSideDistance_{(Shoulder→Hip)}} {2}$
+<p style="font-size:20px">$X_{landmark size}=  \frac{RightSideDistance_{Shoulder→Hip} + LeftSideDistance_{(Shoulder→Hip)}} {2}$</p>
 
 We get the average of the distance on the right side and the left one, then using a polynomial equation we get how far the detected person is from the camera. The coefficients of the polynomial equation are calculated by measuring the size of landmarks, the distance between shoulders and hips, to how far a person is from the device camera.
 
