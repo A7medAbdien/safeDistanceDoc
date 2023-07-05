@@ -1,0 +1,6 @@
+[submodule "safeDistacneFlask"]
+	path = safeDistacneFlask
+	url = https://github.com/A7medAbdien/safeDistacneFlask.git
+[submodule "safeDitanceAndroid"]
+	path = safeDitanceAndroid
+	url = https://github.com/A7medAbdien/safeDitanceAndroid.git
